@@ -1,0 +1,88 @@
+/*Global & Reset*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700");
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --text-dark: hsl(229, 25%, 31%);
+  --text-score: hsl(229, 64%, 46%);
+}
+
+::placeholder {
+  color: var(--black);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+
+  /* DEBUG BORDER */
+  /* border: 1px solid red; */
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*End of Global & Reset*/
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.Scoreboard-wrapper {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  border: 0.3rem solid hsl(217, 16%, 45%);
+  border-radius: 1rem;
+}
+
+.Scoreboard-wrapper div {
+  margin: 2rem 3rem;
+}
+
+.Rps p {
+  font-size: 8rem;
+  line-height: 0.75;
+}
+
+.Score-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 6rem;
+  border-radius: 1rem;
+}
+.Score-title {
+  color: var(--text-score);
+  font-size: 2rem;
+}
+
+.Score {
+  color: var(--text-dark);
+  font-size: 10rem;
+}
