@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Scoreboard from "./components/Scoreboard";
+import Selection from "./components/Selection";
+import Game from "./components/Game";
 import "./Css/App.css";
 
 const CHOICES = ["rock", "paper", "scissors"];
@@ -25,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <Scoreboard />
+      {!playerChoice ? <Selection /> : <Game playerChoice={playerChoice} computerChoice={computerChoice} />}
       <div>
         {CHOICES.map((choice) => (
           <button key={choice} onClick={() => handlePlayerChoice(choice)}>
