@@ -23,11 +23,14 @@ function App() {
       setResult("Computer wins!");
     }
   }
+  function testFn(e) {
+    console.log(e);
+  }
 
   return (
     <div className="App">
       <Scoreboard />
-      {!playerChoice ? <Selection /> : <Game playerChoice={playerChoice} computerChoice={computerChoice} />}
+      {!playerChoice ? <Selection /> : <Game playerChoice={playerChoice} computerChoice={computerChoice} handlePlayerChoice={handlePlayerChoice} testFn={testFn} />}
       <div>
         {CHOICES.map((choice) => (
           <button key={choice} onClick={() => handlePlayerChoice(choice)}>

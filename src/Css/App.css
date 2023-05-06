@@ -87,3 +87,39 @@ html {
   color: var(--text-dark);
   font-size: 10rem;
 }
+
+.Selection-Container {
+  margin: 5rem auto;
+  width: 55rem;
+  height: 55vh;
+  background-image: url("../images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30rem;
+  display: grid;
+  place-items: center;
+  grid-template-areas:
+    "Rock Paper"
+    "Scissors Scissors";
+}
+
+.Inner-Circle-Paper {
+  grid-area: Paper;
+}
+
+.Inner-Circle-Rock {
+  grid-area: Rock;
+}
+.Inner-Circle-Scissors {
+  grid-area: Scissors;
+}
+
+.Inner-Circle {
+  height: 10rem;
+  aspect-ratio: 1/1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
