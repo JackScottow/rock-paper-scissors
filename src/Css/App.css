@@ -103,23 +103,49 @@ html {
     "Scissors Scissors";
 }
 
-.Inner-Circle-Paper {
+.Outer-Circle-Paper {
   grid-area: Paper;
+  background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  box-shadow: rgba(41, 69, 193, 0.8) 1px 10px 0px -2px;
 }
 
-.Inner-Circle-Rock {
+.Outer-Circle-Rock {
   grid-area: Rock;
+  background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  box-shadow: rgba(156, 23, 49, 0.8) 1px 10px 0px -2px;
 }
-.Inner-Circle-Scissors {
+.Outer-Circle-Scissors {
   grid-area: Scissors;
+  background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  box-shadow: rgba(199, 108, 29, 0.8) 1px 10px 0px -2px;
 }
 
-.Inner-Circle {
-  height: 10rem;
+.Outer-Circle {
+  height: 18rem;
   aspect-ratio: 1/1;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Outer-Circle:hover {
+  transform: scale(1.05);
+}
+
+.Outer-Circle:active {
+  transform: scale(1);
+}
+
+.Inner-Circle {
+  height: 13rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: rgba(8, 8, 8, 0.3) 1px 8px 0px -2px inset;
 }
