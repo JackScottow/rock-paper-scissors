@@ -1,6 +1,6 @@
 import React from "react";
 
-const Scoreboard = () => {
+const Scoreboard = ({ score }) => {
   return (
     <div className="Scoreboard-wrapper">
       <div className="Rps">
@@ -10,7 +10,7 @@ const Scoreboard = () => {
       </div>
       <div className="Score-counter">
         <p className="Score-title">SCORE</p>
-        <p className="Score">12</p>
+        <p className="Score">{score}</p>
       </div>
     </div>
   );
