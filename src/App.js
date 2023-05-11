@@ -4,12 +4,13 @@ import Selection from "./components/Selection";
 import Game from "./components/Game";
 import "./Css/App.css";
 
-const CHOICES = ["rock", "paper", "scissors"];
+const CHOICES = ["Rock", "Paper", "Scissors"];
 
 function App() {
   const [playerChoice, setPlayerChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
   const [result, setResult] = useState(null);
+  const [score, setScore] = useState(0);
 
   function handlePlayerChoice(choice) {
     setPlayerChoice(choice);
@@ -17,34 +18,22 @@ function App() {
     setComputerChoice(computerChoice);
     if (choice === computerChoice) {
       setResult("Tie");
-    } else if ((choice === "rock" && computerChoice === "scissors") || (choice === "paper" && computerChoice === "rock") || (choice === "scissors" && computerChoice === "paper")) {
+    } else if ((choice === "Rock" && computerChoice === "Scissors") || (choice === "Paper" && computerChoice === "Rock") || (choice === "Scissors" && computerChoice === "Paper")) {
       setResult("You win!");
+      setScore(score + 1);
     } else {
       setResult("Computer wins!");
     }
   }
-  function testFn(e) {
-    console.log(e);
+
+  function resetGame() {
+    setPlayerChoice(null);
   }
 
   return (
     <div className="App">
-      <Scoreboard />
-      {!playerChoice ? <Selection /> : <Game playerChoice={playerChoice} computerChoice={computerChoice} handlePlayerChoice={handlePlayerChoice} testFn={testFn} />}
-      <div>
-        {CHOICES.map((choice) => (
-          <button key={choice} onClick={() => handlePlayerChoice(choice)}>
-            {choice}
-          </button>
-        ))}
-      </div>
-      {playerChoice && (
-        <div>
-          <h2>You chose {playerChoice}</h2>
-          <h2>Computer chose {computerChoice}</h2>
-          <h2>{result}</h2>
-        </div>
-      )}
+      <Scoreboard score={score} />
+      {!playerChoice ? <Selection handlePlayerChoice={handlePlayerChoice} /> : <Game playerChoice={playerChoice} computerChoice={computerChoice} result={result} resetGame={resetGame} />}
     </div>
   );
 }
