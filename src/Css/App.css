@@ -22,6 +22,8 @@
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 700;
   letter-spacing: 0.1rem;
+  color: white;
+  user-select: none;
 
   /* DEBUG BORDER */
   /* border: 1px solid red; */
@@ -126,20 +128,20 @@ html {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  cursor: pointer;
-  user-select: none;
 }
-
+.Selection-Container .Outer-Circle {
+  cursor: pointer;
+}
 .Outer-Circle[title] {
   font-size: 5rem;
 }
 
-.Outer-Circle:hover {
+.Selection-Container .Outer-Circle:hover {
   transform: scale(1.05);
   transition: 0.01s;
 }
 
-.Outer-Circle:active {
+.Selection-Container .Outer-Circle:active {
   transform: scale(1);
   transition: 0.01s;
 }
@@ -159,4 +161,20 @@ html {
 .Rock,
 .Scissors {
   height: 55%;
+}
+
+.Game-Container {
+  width: 65rem;
+  display: flex;
+  margin: 5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Game-Container .Outer-Circle {
+  height: 25rem;
+}
+
+.Game-Container .Inner-Circle {
+  height: 19rem;
 }
