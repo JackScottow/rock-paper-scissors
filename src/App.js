@@ -20,7 +20,7 @@ function App() {
       setResult("Tie");
     } else if ((choice === "Rock" && computerChoice === "Scissors") || (choice === "Paper" && computerChoice === "Rock") || (choice === "Scissors" && computerChoice === "Paper")) {
       setResult("You win!");
-      setScore(score + 1);
+      setScore((prevScore) => prevScore + 1);
     } else {
       setResult("Computer wins!");
     }
@@ -28,6 +28,8 @@ function App() {
 
   function resetGame() {
     setPlayerChoice(null);
+    setComputerChoice(null);
+    setResult(null);
   }
 
   return (
