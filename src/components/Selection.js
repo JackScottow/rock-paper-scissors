@@ -3,7 +3,7 @@ import IconPaper from "../images/icon-paper.svg";
 import IconRock from "../images/icon-rock.svg";
 import IconScissors from "../images/icon-scissors.svg";
 
-const Selection = ({ testFn, handlePlayerChoice }) => {
+const Selection = ({ handlePlayerChoice }) => {
   return (
     <div className="Selection-Container">
       <div className="Outer-Circle-Paper Outer-Circle" title="Paper!" onClick={() => handlePlayerChoice("Paper")}>

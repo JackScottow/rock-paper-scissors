@@ -27,8 +27,12 @@ const Game = ({ playerChoice, computerChoice, result, resetGame }) => {
         <h2>VS</h2>
         <div className="Computer-Choice-Selection-Container">{computerChoice && renderChoice(computerChoice)}</div>
       </div>
-      <h2>{result}</h2>
-      <button onClick={resetGame}>Play Again</button>
+      <div className="Result-Container">
+        <h2>{result}</h2>
+        <button onClick={resetGame} className="Reset-Button">
+          Play Again!
+        </button>
+      </div>
     </div>
   );
 };

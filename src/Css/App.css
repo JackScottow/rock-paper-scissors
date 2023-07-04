@@ -44,10 +44,11 @@ html {
 
 .App {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
@@ -76,7 +77,7 @@ html {
   justify-content: space-evenly;
   align-items: center;
   background-color: white;
-  padding: 1rem 6rem;
+  padding: 1rem 5vw;
   border-radius: 1rem;
 }
 .Score-title {
@@ -90,13 +91,12 @@ html {
 }
 
 .Selection-Container {
-  margin: 5rem auto;
-  width: 55rem;
-  height: 55vh;
+  width: 50vmax;
+  height: 50vmax;
   background-image: url("../images/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 30rem;
+  background-size: 45vmin;
   display: grid;
   place-items: center;
   grid-template-areas:
@@ -177,4 +177,87 @@ html {
 
 .Game-Container .Inner-Circle {
   height: 19rem;
+}
+
+.Result-Container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.Result-Container h2 {
+  font-size: 2.5rem;
+}
+
+.Reset-Button {
+  cursor: pointer;
+  margin: 2rem;
+  padding: 1rem;
+  color: var(--text-dark);
+  font-size: 2.25rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--text-dark);
+}
+
+.Reset-Button:hover {
+  transform: scale(1.05);
+}
+
+.Reset-Button:active {
+  transform: scale(1);
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+  /* Update styles for smaller screens */
+  html {
+    font-size: 35%;
+  }
+  .Scoreboard-wrapper {
+    width: 70vw;
+    /* Update styles for Scoreboard-wrapper component on smaller screens */
+  }
+
+  .Selection-Container {
+    margin: 0;
+  }
+
+  /* Update other styles as needed */
+}
+
+/* Add media query for medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Update styles for medium screens */
+  html {
+    font-size: 45%;
+  }
+  .App {
+    /* Update styles for App component on medium screens */
+  }
+
+  .Scoreboard-wrapper {
+    /* Update styles for Scoreboard-wrapper component on medium screens */
+  }
+
+  /* Update other styles as needed */
+}
+
+/* Add media query for larger screens */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  html {
+    font-size: 55%;
+  }
+  /* Update styles for larger screens */
+
+  .App {
+    /* Update styles for App component on larger screens */
+  }
+
+  .Scoreboard-wrapper {
+    /* Update styles for Scoreboard-wrapper component on larger screens */
+  }
+
+  /* Update other styles as needed */
 }
