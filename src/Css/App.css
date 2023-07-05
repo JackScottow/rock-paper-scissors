@@ -48,12 +48,10 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
 .Scoreboard-wrapper {
-  justify-self: flex-start;
   width: 50vw;
   margin-top: 5rem;
   padding: 2rem;
@@ -91,12 +89,12 @@ html {
 }
 
 .Selection-Container {
-  width: 50vmax;
-  height: 50vmax;
+  width: 50vw;
+  aspect-ratio: 1/1;
   background-image: url("../images/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 45vmin;
+  background-size: 55%;
   display: grid;
   place-items: center;
   grid-template-areas:
@@ -209,55 +207,43 @@ html {
   transform: scale(1);
 }
 
-/* Add media query for smaller screens */
-@media (max-width: 768px) {
-  /* Update styles for smaller screens */
+/* Media Queries */
+/* Phone Portrait */
+@media (max-width: 420px) {
+  html {
+    font-size: 30%;
+  }
+  .Scoreboard-wrapper {
+    width: 90vw;
+    margin-top: 5rem;
+  }
+
+  .Selection-Container {
+    width: 90vw;
+  }
+}
+/* Smaller Screens */
+@media (min-width: 421px) and (max-width: 768px) {
   html {
     font-size: 35%;
   }
   .Scoreboard-wrapper {
     width: 70vw;
-    /* Update styles for Scoreboard-wrapper component on smaller screens */
   }
-
-  .Selection-Container {
-    margin: 0;
-  }
-
-  /* Update other styles as needed */
 }
-
-/* Add media query for medium screens */
+/* Medium Screens */
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* Update styles for medium screens */
   html {
     font-size: 45%;
   }
-  .App {
-    /* Update styles for App component on medium screens */
-  }
-
-  .Scoreboard-wrapper {
-    /* Update styles for Scoreboard-wrapper component on medium screens */
-  }
-
-  /* Update other styles as needed */
 }
 
-/* Add media query for larger screens */
+/* Larger Screens */
 @media (min-width: 1025px) and (max-width: 1400px) {
   html {
     font-size: 55%;
   }
-  /* Update styles for larger screens */
-
-  .App {
-    /* Update styles for App component on larger screens */
-  }
 
   .Scoreboard-wrapper {
-    /* Update styles for Scoreboard-wrapper component on larger screens */
   }
-
-  /* Update other styles as needed */
 }
