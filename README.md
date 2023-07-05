@@ -12,8 +12,8 @@ This is a simple Rock Paper Scissors game built with React with assets from Fron
 
 ## Technologies Used
 
-- React - JavaScript library for building user interfaces.
-- HTML/CSS - Markup and styling of the game.
-- JavaScript - Programming language for game logic.
+- React
+- HTML/CSS
+- JavaScript
 
 ![Screenshot](screenshot.png)
