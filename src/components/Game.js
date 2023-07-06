@@ -21,7 +21,7 @@ const Game = ({ playerChoice, computerChoice, result, resetGame }) => {
   };
 
   return (
-    <div>
+    <div className="Results-Page">
       <div className="Game-Container">
         <div className="Player-Choice-Selection-Container">{playerChoice && renderChoice(playerChoice)}</div>
         <h2>VS</h2>

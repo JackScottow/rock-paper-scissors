@@ -89,6 +89,7 @@ html {
 }
 
 .Selection-Container {
+  margin: auto;
   width: 50vw;
   aspect-ratio: 1/1;
   background-image: url("../images/bg-triangle.svg");
@@ -161,6 +162,9 @@ html {
   height: 55%;
 }
 
+.Results-Page {
+  margin: auto;
+}
 .Game-Container {
   width: 65rem;
   display: flex;
