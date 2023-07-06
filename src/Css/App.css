@@ -173,6 +173,9 @@ html {
   justify-content: space-between;
 }
 
+.Game-Container h2 {
+  font-size: 3.5rem;
+}
 .Game-Container .Outer-Circle {
   height: 25rem;
 }
